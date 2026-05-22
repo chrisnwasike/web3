@@ -12,7 +12,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
@@ -29,8 +29,8 @@
       --prime:    #EBF0F9;
       --border:   rgba(255,255,255,0.055);
       --border-g: rgba(180,255,0,0.14);
-      --fb:       'Space Grotesk', system-ui, sans-serif;
-      --fm:       'Space Mono', monospace;
+      --fb:       'Chakra Petch', system-ui, sans-serif;
+      --fm:       'DM Mono', monospace;
       --fd:       'Chakra Petch', sans-serif;
     }
 
@@ -158,10 +158,10 @@
       position: relative; z-index: 1;
     }
     .hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: clamp(3rem,6vw,6rem);
-      align-items: center;
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: clamp(1rem,2vw,2rem);
+        align-items: center;
     }
     @media (max-width: 960px) {
       .hero-grid { grid-template-columns: 1fr; }
@@ -181,14 +181,17 @@
       background: var(--green); flex-shrink: 0;
     }
 
-    h1.h-head {
-      font-family: var(--fd);
-      font-size: clamp(2.8rem, 5.5vw, 5.2rem);
-      font-weight: 800; line-height: 1.03;
-      letter-spacing: -0.035em; color: var(--prime);
-      margin-bottom: 1.75rem;
-      opacity: 0; transform: translateY(30px);
-    }
+h1.h-head {
+    font-family: var(--fd);
+    font-size: clamp(2.5rem, 4.5vw, 4.2rem);
+    font-weight: 800;
+    line-height: 1.03;
+    letter-spacing: -0.035em;
+    color: var(--prime);
+    margin-bottom: 1.75rem;
+    opacity: 0;
+    transform: translateY(30px);
+}
     h1.h-head em { font-style: normal; color: var(--green); }
 
     .h-sub {
@@ -231,10 +234,33 @@
     }
     .h-trust-item strong { color: var(--muted); font-weight: 400; }
 
+    .avail-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.38rem 0.9rem;
+      border: 1px solid rgba(180,255,0,0.22);
+      background: rgba(180,255,0,0.04);
+      margin-bottom: 2.75rem;
+      width: fit-content;
+    }
+    .avail-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--green);
+      animation: blink 2s ease-in-out infinite;
+    }
+    .avail-text {
+      font-family: var(--fm);
+      font-size: 0.58rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--green);
+    }
+
     /* Hero visual rotator */
     .hero-right { opacity: 0; transform: translateY(20px); }
     .hero-visual {
-      position: relative; aspect-ratio: 4/3;
+      position: relative; aspect-ratio: 5/3;
       overflow: hidden; border: 1px solid var(--border);
       background: var(--surface);
     }
@@ -451,15 +477,23 @@
     }
     .cs-tag.tag-sec { border-color: rgba(180,255,0,0.15); color: rgba(180,255,0,0.6); }
 
-    .cs-img-main {
-      flex: 1; min-height: 0; overflow: hidden;
-      border: 1px solid var(--border); position: relative;
-      background: var(--bg); cursor: pointer;
-    }
-    .cs-img-main img {
-      width: 100%; height: 100%; object-fit: cover; display: block;
-      filter: brightness(0.88); transition: filter 0.3s;
-    }
+.cs-img-main {
+    /* flex: 1; */
+    min-height: 0;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    position: relative;
+    background: var(--bg);
+    cursor: pointer;
+}
+.cs-img-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    filter: brightness(0.88);
+    transition: filter 0.3s;
+}
     .cs-img-main:hover img { filter: brightness(1); }
     .cs-img-overlay {
       position: absolute; inset: 0;
@@ -469,11 +503,14 @@
     .cs-img-main:hover .cs-img-overlay { opacity: 1; }
     .cs-img-overlay i { color: var(--green); font-size: 1.3rem; }
 
-    .cs-thumbs { display: grid; grid-template-columns: repeat(3,1fr); gap: 0.4rem; }
-    .cs-thumb-sm {
-      height: 66px; overflow: hidden; border: 1px solid var(--border);
-      cursor: pointer; background: var(--bg);
-    }
+    .cs-thumbs { display: grid; grid-template-columns: repeat(2,1fr); gap: 0.4rem; }
+.cs-thumb-sm {
+    height: 175px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    background: var(--bg);
+}
     .cs-thumb-sm img {
       width: 100%; height: 100%; object-fit: cover; display: block;
       filter: brightness(0.72) grayscale(15%); transition: filter 0.2s;
@@ -589,15 +626,39 @@
 
     /* ─── ABOUT ──────────────────────────── */
     #about { background: var(--s2); }
-    .about-grid {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: clamp(3rem,6vw,5.5rem); align-items: start;
-    }
+.about-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: clamp(3rem,6vw,5.5rem);
+    align-items: start;
+}
     @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; } }
 
     .about-body { font-size: 0.96rem; line-height: 1.82; color: var(--muted); }
     .about-body strong { color: var(--prime); font-weight: 600; }
     .about-body p + p { margin-top: 1.1rem; }
+
+    .testimonial-block {
+      margin-top: 3rem;
+      padding: 1.5rem 1.75rem;
+      background: rgba(180,255,0,0.025);
+      border: 1px solid rgba(180,255,0,0.09);
+      border-left: 2px solid var(--green);
+      max-width: 640px;
+    }
+    .t-quote {
+      font-size: 0.95rem;
+      line-height: 1.82;
+      color: var(--prime);
+      font-style: italic;
+      margin-bottom: 0.65rem;
+    }
+    .t-attr {
+      font-family: var(--fm);
+      font-size: 0.54rem;
+      letter-spacing: 0.1em;
+      color: var(--green);
+    }
 
     .about-links { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1.75rem; }
     .about-link {
@@ -749,7 +810,7 @@
     <a href="#services"  class="hide-sm">Services</a>
     <a href="#resources" class="hide-xs">Resources</a>
     <a href="#contact">Contact</a>
-    <a href="https://calendly.com/chris-dbuilder/30min" target="_blank" rel="noopener" class="nav-cta">Book a Call</a>
+    <a href="https://calendly.com/chrisnwasike/30min" target="_blank" rel="noopener" class="nav-cta">Book a Call</a>
   </div>
 </nav>
 
@@ -769,14 +830,13 @@
 
           <h1 class="h-head">
             After all the hype,<br/>
-            <em>your community still<br/>
+            <em>your community still
             needs infrastructure.</em>
           </h1>
 
           <p class="h-sub">
             Your web3 community needs infrastructure to sustain it after the initial excitement fades. 
-            I design and build the systems that keep communities active, engaged, and 
-            economically healthy long after the mint spike fades.
+            Let's create the systems that'll keep it active long after the mint and airdrop.
           </p>
 
           <div class="h-actions">
@@ -784,9 +844,14 @@
               View Case Studies
               <i class="fa-solid fa-arrow-right fa-sm"></i>
             </a>
-            <a href="https://calendly.com/chris-dbuilder/30min" target="_blank" rel="noopener" class="btn-g">
+            <a href="https://calendly.com/chrisnwasike/30min" target="_blank" rel="noopener" class="btn-g">
               Book a Strategy Call
             </a>
+          </div>
+
+          <div class="avail-badge">
+            <span class="avail-dot"></span>
+            <span class="avail-text">Available for hire - Q2 2026</span>
           </div>
 
           <div class="h-trust">
@@ -898,7 +963,7 @@
                 <span class="cs-idx">01 / 09</span>
                 <span class="cs-badge badge-build">Alpha · Aug 2026</span>
               </div>
-              <h3 class="cs-title">PunkHam<br/>Mayhem S1</h3>
+              <h3 class="cs-title">PunkHam Mayhem S1</h3>
               <p class="cs-type">Participation Economy · Season System · Browser-Native · Base</p>
               <div class="cs-ps-row">
                 <div class="cs-ps-block">
@@ -948,7 +1013,7 @@
                 <span class="cs-idx">02 / 09</span>
                 <span class="cs-badge badge-live">Live</span>
               </div>
-              <h3 class="cs-title">Punk<br/>Arcade</h3>
+              <h3 class="cs-title">Punk Arcade</h3>
               <p class="cs-type">Automated Game Platform · Zero-Admin Operations · Two Live Games · Base</p>
               <div class="cs-ps-row">
                 <div class="cs-ps-block">
@@ -998,7 +1063,7 @@
                 <span class="cs-idx">03 / 09</span>
                 <span class="cs-badge badge-live">Live · Beta</span>
               </div>
-              <h3 class="cs-title">BTFD<br/>Rabbits</h3>
+              <h3 class="cs-title">BTFD Rabbits</h3>
               <p class="cs-type">Holder Retention Platform · Closed Currency Economy · Anti-Churn Mechanics · Ethereum</p>
               <div class="cs-ps-row">
                 <div class="cs-ps-block">
@@ -1047,7 +1112,7 @@
                 <span class="cs-idx">04 / 09</span>
                 <span class="cs-badge badge-live">Live</span>
               </div>
-              <h3 class="cs-title">PunkLocker<br/>+ Punk Power</h3>
+              <h3 class="cs-title">PunkLocker + Punk Power</h3>
               <p class="cs-type">Long-Term Loyalty System · Compounding Commitment Mechanics · Base Blockchain</p>
               <div class="cs-ps-row">
                 <div class="cs-ps-block">
@@ -1074,6 +1139,12 @@
                 <span class="cs-tag">On-chain Bridge</span>
                 <span class="cs-tag">Non-transferable Rewards</span>
                 <span class="cs-tag">Base Blockchain</span>
+                <a href="https://basescan.org/address/[INSERT_CONTRACT_ADDRESS]"
+                   target="_blank" rel="noopener"
+                   class="cs-tag tag-sec"
+                   style="text-decoration:none; cursor:pointer;">
+                  ↗ verify on-chain
+                </a>
               </div>
             </div>
             <div class="cs-right">
@@ -1096,7 +1167,7 @@
                 <span class="cs-idx">05 / 09</span>
                 <span class="cs-badge badge-live">Live</span>
               </div>
-              <h3 class="cs-title">$JUNK<br/>Economy</h3>
+              <h3 class="cs-title">$JUNK Economy</h3>
               <p class="cs-type">Deflationary Community Currency · Fixed Supply · Dual-Layer Architecture · Base</p>
               <div class="cs-ps-row">
                 <div class="cs-ps-block">
@@ -1145,7 +1216,7 @@
                 <span class="cs-idx">06 / 09</span>
                 <span class="cs-badge badge-live">Live</span>
               </div>
-              <h3 class="cs-title">The Secret<br/>World</h3>
+              <h3 class="cs-title">The Secret World</h3>
               <p class="cs-type">Persistent Idle World · Three-Tier Economy · Community Governance · Ethereum</p>
               <div class="cs-ps-row">
                 <div class="cs-ps-block">
@@ -1194,7 +1265,7 @@
                 <span class="cs-idx">07 / 09</span>
                 <span class="cs-badge badge-build">In Build</span>
               </div>
-              <h3 class="cs-title">Punk<br/>Vault</h3>
+              <h3 class="cs-title">Punk Vault</h3>
               <p class="cs-type">Community Intelligence Platform · Holder Behaviour Analytics · Multi-Chain</p>
               <div class="cs-ps-row">
                 <div class="cs-ps-block">
@@ -1242,7 +1313,7 @@
                 <span class="cs-idx">08 / 09</span>
                 <span class="cs-badge badge-ship">Shipped</span>
               </div>
-              <h3 class="cs-title">Modular NFT<br/>Gaming System</h3>
+              <h3 class="cs-title">Modular NFT Gaming System</h3>
               <p class="cs-type">Extensible Game Contract Framework · Add Features Without Redeployment</p>
               <div class="cs-ps-row">
                 <div class="cs-ps-block">
@@ -1291,7 +1362,7 @@
                 <span class="cs-idx">09 / 09</span>
                 <span class="cs-badge badge-ship">Shipped</span>
               </div>
-              <h3 class="cs-title">Decentralised<br/>NFT Marketplace</h3>
+              <h3 class="cs-title">Decentralised NFT Marketplace</h3>
               <p class="cs-type">Trustless Trading Infrastructure · Contract-Enforced Creator Royalties · 10 Blockchains</p>
               <div class="cs-ps-row">
                 <div class="cs-ps-block">
@@ -1452,7 +1523,7 @@
           <div class="res-file">PDF · Playbook</div>
           <div class="res-cat">03 · Implementation Playbook</div>
           <h3 class="res-title">The Engagement Loop Playbook</h3>
-          <p class="res-desc">The exact system architecture behind a Web3 community that retains 70%+ of holders past 90 days. The mechanics, the sequencing, the economy design decisions - documented as an implementable playbook, not a theory.</p>
+          <p class="res-desc">The exact system architecture behind a Web3 community. Across system-backed ecosystems, 70%+ holder retention past Day 90 vs 16% industry baseline. The mechanics, the sequencing, the economy design decisions - documented as an implementable playbook, not a theory.</p>
           <a href="docs/03_chrisdbuilder_playbook.pdf" class="res-cta" download>
             Download PDF <i class="fa-solid fa-arrow-down-to-line fa-sm"></i>
           </a>
@@ -1468,7 +1539,7 @@
       <div class="about-grid">
 
         <div>
-          <p class="s-eye r-lft">About</p>
+          <p class="s-eye r-lft">About Chris</p>
           <h2 class="s-head r-up" style="margin-bottom:1.75rem;">
             Solo Founder.<br/>
             Systems Architect.<br/>
@@ -1524,6 +1595,12 @@
         </div>
 
       </div>
+
+      <div class="testimonial-block r-up">
+        <div class="t-quote">"Chris owns the full architecture stack - smart contracts, backend, automation, and economy design - solo. The system ran itself."</div>
+        <div class="t-attr">- Didi,  (Founder) BTFDRabbits · Ethereum Ecosystem</div>
+      </div>
+
     </div>
   </section>
 
@@ -1546,7 +1623,7 @@
             Email Me Directly
             <i class="fa-solid fa-arrow-right fa-sm"></i>
           </a>
-          <a href="https://calendly.com/chris-dbuilder/30min" class="btn-g" target="_blank" rel="noopener">
+          <a href="https://calendly.com/chrisnwasike/30min" class="btn-g" target="_blank" rel="noopener">
             Book a Call
           </a>
         </div>
@@ -1578,7 +1655,7 @@
           <div class="c-icon"><i class="fa-solid fa-calendar"></i></div>
           <div>
             <div class="c-lbl">Schedule</div>
-            <div class="c-val"><a href="https://calendly.com/chris-dbuilder/30min" target="_blank" rel="noopener">calendly.com/chris-dbuilder</a></div>
+            <div class="c-val"><a href="https://calendly.com/chrisnwasike/30min" target="_blank" rel="noopener">calendly.com/chris-dbuilder</a></div>
           </div>
         </div>
       </div>
