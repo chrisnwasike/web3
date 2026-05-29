@@ -18,7 +18,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
   <style>
-    /* ─── TOKENS ─────────────────────────── */
+    /* tokens */
     :root {
       --bg:       #060A13;
       --surface:  #0D1421;
@@ -58,7 +58,7 @@
       background-size: 200px 200px; opacity: 0.28;
     }
 
-    /* ─── LAYOUT ─────────────────────────── */
+    /* layout */
     .wrap {
       max-width: 1200px; margin: 0 auto;
       padding-left: clamp(1.25rem, 4vw, 2.5rem);
@@ -77,7 +77,7 @@
       *, *::before, *::after { animation-duration:.01ms!important; transition-duration:.01ms!important; }
     }
 
-    /* ─── NAV ────────────────────────────── */
+    /* nav */
     #site-nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
       height: 56px; display: flex; align-items: center;
@@ -110,7 +110,7 @@
     .nav-cta:hover { background: var(--green); color: var(--bg); }
     @media (max-width: 560px) { .nav-link { display: none; } }
 
-    /* ─── HERO ───────────────────────────── */
+    /* hero */
     #hero {
       min-height: 100vh;
       padding-top: clamp(100px, 14vh, 130px);
@@ -120,7 +120,7 @@
       border-bottom: 1px solid var(--border);
     }
 
-    /* Radial glow behind hero text */
+    /* hero glow */
     #hero::before {
       content: ''; position: absolute;
       top: 15%; left: 0; width: 55%; height: 70%;
@@ -261,7 +261,7 @@
       content: ''; flex: 1; height: 1px; background: var(--border);
     }
 
-    /* ─── TICKER ─────────────────────────── */
+    /* ticker */
     #ticker {
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
@@ -280,7 +280,7 @@
     }
     .tick-item span { color: var(--green); margin-right: 0.6rem; }
 
-    /* ─── SECTION CHROME ─────────────────── */
+    /* section headers */
     .s-eye {
       font-family: var(--fm); font-size: 0.54rem;
       letter-spacing: 0.28em; color: var(--green);
@@ -309,7 +309,7 @@
       margin-bottom: clamp(2.5rem, 4vw, 3.5rem);
     }
 
-    /* ─── CASE STUDIES ───────────────────── */
+    /* case studies */
     #work {
       background: var(--bg);
       padding: clamp(4rem, 7vw, 7rem) 0;
@@ -480,7 +480,7 @@
     }
     .onchain-row:hover .onchain-addr { color: var(--green); }
 
-    /* ─── WHAT I BUILD ───────────────────── */
+    /* services */
     #services {
       background: var(--s2);
       padding: clamp(4rem, 7vw, 7rem) 0;
@@ -541,7 +541,7 @@
       display: block; margin-bottom: 0.12rem;
     }
 
-    /* ─── ABOUT ──────────────────────────── */
+    /* about */
     #about {
       background: var(--bg);
       padding: clamp(4rem, 7vw, 7rem) 0;
@@ -584,7 +584,7 @@
     .cred-val { font-size: 0.8rem; color: var(--prime); line-height: 1.55; }
     .cred-note { font-family: var(--fm); font-size: 0.52rem; color: var(--muted); }
 
-    /* ─── CONTACT ────────────────────────── */
+    /* contact */
     #contact {
       background: var(--s2);
       padding: clamp(5rem, 9vw, 8rem) 0;
@@ -649,7 +649,7 @@
     .contact-cell i { color: var(--green); font-size: 0.75rem; }
     .contact-cell:hover { background: var(--bg); color: var(--prime); }
 
-    /* ─── FOOTER ─────────────────────────── */
+    /* footer */
     footer {
       background: var(--bg); padding: 1.5rem 0;
       border-top: 1px solid var(--border);
@@ -670,7 +670,7 @@
 </head>
 <body>
 
-<!-- ── NAV ───────────────────────────────────────── -->
+<!-- nav -->
 <nav id="site-nav">
   <div class="nav-brand">
     <div class="nav-dot"></div>
@@ -684,7 +684,7 @@
   </div>
 </nav>
 
-<!-- ── HERO ──────────────────────────────────────── -->
+<!-- hero -->
 <section id="hero">
   <div class="wrap">
     <div class="hero-inner">
@@ -718,7 +718,7 @@
         <div class="hero-trust">
           <div class="trust-item">Stack <strong>Solidity · PHP · MySQL · ethers.js</strong></div>
           <div class="trust-item">Chains <strong>Base · Ethereum · ApeChain</strong></div>
-          <div class="trust-item">Years <strong>10+ Engineering · 3+ Web3</strong></div>
+          <div class="trust-item">Experience <strong>10+ Engineering · 3+ Web3</strong></div>
         </div>
       </div>
 
@@ -726,7 +726,7 @@
         <div class="stat-card">
           <div class="sc-header">
             <div class="sc-dot"></div>
-            <span class="sc-label">Live Ecosystem Metrics</span>
+            <span class="sc-label">Ecosystem Stats</span>
           </div>
           <div class="sc-grid">
             <div class="sc-cell">
@@ -747,7 +747,7 @@
             </div>
           </div>
           <div class="sc-footer">
-            All metrics from live production deployments
+            All from live deployments
           </div>
         </div>
       </div>
@@ -756,7 +756,7 @@
   </div>
 </section>
 
-<!-- ── TICKER ─────────────────────────────────────── -->
+<!-- ticker -->
 <div id="ticker" aria-hidden="true">
   <div class="tick-track">
     <span class="tick-item"><span>↗</span>Staking Engines</span>
@@ -769,7 +769,7 @@
     <span class="tick-item"><span>↗</span>IPFS Infrastructure</span>
     <span class="tick-item"><span>↗</span>Idle Game Loops</span>
     <span class="tick-item"><span>↗</span>Season Economies</span>
-    <!-- dupe for infinite scroll -->
+    <!-- duplicated for seamless loop -->
     <span class="tick-item"><span>↗</span>Staking Engines</span>
     <span class="tick-item"><span>↗</span>GameFi Backends</span>
     <span class="tick-item"><span>↗</span>Token Economies</span>
@@ -783,7 +783,7 @@
   </div>
 </div>
 
-<!-- ── CASE STUDIES ───────────────────────────────── -->
+<!-- work -->
 <section id="work">
   <div class="wrap">
     <div class="section-hdr">
@@ -791,12 +791,12 @@
         <div class="s-eye">Selected Work</div>
         <h2 class="s-head">Three systems. All still running.</h2>
       </div>
-      <p class="s-sub">Not demos. Not prototypes. Production infrastructure with real users, real transactions, and measurable retention outcomes.</p>
+      <p class="s-sub">Production infrastructure with real users, real transactions, and measurable retention outcomes.</p>
     </div>
 
     <div class="case-list">
 
-      <!-- CASE 1: PunkHam Mayhem + Punkverse -->
+      <!-- PunkHam Mayhem + Punkverse -->
       <div class="case-item" data-reveal>
         <div class="case-inner">
           <div class="case-left">
@@ -879,7 +879,7 @@
         </div>
       </div>
 
-      <!-- CASE 2: BTFD Rabbits Staking Platform -->
+      <!-- BTFD Rabbits Staking Platform -->
       <div class="case-item" data-reveal>
         <div class="case-inner">
           <div class="case-left">
@@ -931,7 +931,7 @@
             <div class="metric-block">
               <div class="m-label">Retention Outcome</div>
               <div class="m-val"><em>Daily</em></div>
-              <div class="m-note">Platform designed to generate daily return incentives. Token earn/spend loop creates compounding engagement reason to return.</div>
+              <div class="m-note">Token earn/spend loop built around daily return incentives- stake, spend, bid, burn.</div>
             </div>
             <div class="metric-block">
               <div class="m-label">Contract Relationship</div>
@@ -950,7 +950,7 @@
         </div>
       </div>
 
-      <!-- CASE 3: Secret World Gaming Studio -->
+      <!-- Secret World Gaming Studio -->
       <div class="case-item" data-reveal>
         <div class="case-inner">
           <div class="case-left">
@@ -1021,7 +1021,7 @@
   </div>
 </section>
 
-<!-- ── WHAT I BUILD ───────────────────────────────── -->
+<!-- services -->
 <section id="services">
   <div class="wrap">
     <div class="section-hdr">
@@ -1029,7 +1029,7 @@
         <div class="s-eye">Services</div>
         <h2 class="s-head">What I build for<br>Web3 teams.</h2>
       </div>
-      <p class="s-sub">Specialized infrastructure - not generalist dev work. If you need one of these systems, I've already built a production version of it.</p>
+      <p class="s-sub">Specialized infrastructure. If you need any of these, I've already shipped a production version.</p>
     </div>
 
     <div class="svc-grid">
@@ -1098,13 +1098,13 @@
   </div>
 </section>
 
-<!-- ── ABOUT ──────────────────────────────────────── -->
+<!-- about -->
 <section id="about">
   <div class="wrap">
     <div class="section-hdr">
       <div>
         <div class="s-eye">About</div>
-        <h2 class="s-head">The engineer<br>behind the systems.</h2>
+        <h2 class="s-head">10 years building.<br>3 years on-chain.</h2>
       </div>
     </div>
 
@@ -1112,8 +1112,8 @@
       <div>
         <div class="about-body r-up">
           <p>I'm <strong>Chris Nwasike</strong> - a Lagos-based Web3 infrastructure engineer with 10+ years of full-stack experience and 3+ years building production blockchain products. I operate at the intersection most engineers avoid: Solidity for on-chain logic, PHP/MySQL for game servers, and real economic design that keeps users coming back.</p>
-          <p>I don't just build features. I architect retention systems - the staking engines, idle game loops, token economies, and engagement mechanics that are the difference between a community that grows and one that dies after 30 days. Everything I've built is still running. The receipts are on-chain.</p>
-          <p>I've written 10,000-NFT smart contracts from scratch, conducted adversarial security audits before major launches, and built the backend infrastructure for ecosystems on Ethereum, Base, and ApeChain. I work best with teams that are shipping something real and need an engineer who can own the entire backend stack - not just execute tickets.</p>
+          <p>I build retention systems- the staking engines, idle game loops, token economies, and engagement mechanics that separate a growing community from one that dies 30 days after mint. Everything I've shipped is still running. The receipts are on-chain.</p>
+          <p>I've written 10,000-NFT smart contracts from scratch, conducted adversarial security audits before major launches, and built the backend infrastructure for ecosystems on Ethereum, Base, and ApeChain. I work best with teams that are shipping something real and need an engineer who can own the entire backend stack.</p>
         </div>
 
         <div class="about-links r-up">
@@ -1162,7 +1162,7 @@
   </div>
 </section>
 
-<!-- ── CONTACT ────────────────────────────────────── -->
+<!-- contact -->
 <section id="contact">
   <div class="wrap">
     <div class="cta-inner">
@@ -1172,7 +1172,7 @@
         systems that <em>last.</em>
       </h2>
       <p class="cta-sub r-up">
-        I'm available for remote full-time roles and selective contract engagements. If you're building retention infrastructure, GameFi backends, staking systems, or token economies - I want to hear about it.
+        Open to remote full-time roles and contract work. If you're building retention infrastructure, GameFi backends, staking systems, or token economies- let's talk.
       </p>
       <div class="cta-btns r-up">
         <a href="https://calendly.com/chrisnwasike/30min" target="_blank" rel="noopener" class="btn-xl">
@@ -1201,7 +1201,7 @@
   </div>
 </section>
 
-<!-- ── FOOTER ─────────────────────────────────────── -->
+<!-- footer -->
 <footer>
   <div class="wrap">
     <div class="footer-inner">
@@ -1215,7 +1215,7 @@
 </footer>
 
 <script>
-/* ── GSAP SCROLL REVEALS ───────────────────────────── */
+/* scroll reveals */
 window.addEventListener('load', () => {
   if (typeof gsap === 'undefined') {
     document.querySelectorAll('[data-reveal], .r-up').forEach(el => {
@@ -1274,7 +1274,7 @@ window.addEventListener('load', () => {
   });
 });
 
-/* ── SMOOTH SCROLL ─────────────────────────────────── */
+/* smooth scroll */
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const t = document.querySelector(a.getAttribute('href'));
