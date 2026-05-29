@@ -106,6 +106,7 @@
       font-family: var(--fm); font-size: 0.6rem; letter-spacing: 0.1em;
       padding: 0.38rem 1.1rem; border: 1px solid var(--green);
       color: var(--green); transition: background 0.15s, color 0.15s;
+      display: inline-flex; align-items: center; min-height: 44px;
     }
     .nav-cta:hover { background: var(--green); color: var(--bg); }
     @media (max-width: 560px) { .nav-link { display: none; } }
@@ -113,6 +114,7 @@
     /* hero */
     #hero {
       min-height: 100vh;
+      min-height: 100svh;
       padding-top: clamp(100px, 14vh, 130px);
       padding-bottom: clamp(4rem, 7vw, 6rem);
       display: flex; align-items: center;
@@ -153,7 +155,7 @@
       background: var(--green); animation: blink 2s ease-in-out infinite;
     }
     .avail-text {
-      font-family: var(--fm); font-size: 0.56rem;
+      font-family: var(--fm); font-size: 0.76rem;
       letter-spacing: 0.16em; text-transform: uppercase; color: var(--green);
     }
 
@@ -203,7 +205,7 @@
       opacity: 0; animation: fadeUp 0.5s ease 0.55s forwards;
     }
     .trust-item {
-      font-family: var(--fm); font-size: 0.54rem;
+      font-family: var(--fm); font-size: 0.74rem;
       letter-spacing: 0.06em; color: var(--dim);
     }
     .trust-item strong { color: var(--muted); font-weight: 400; }
@@ -229,7 +231,7 @@
       background: var(--green); animation: blink 3s ease-in-out infinite;
     }
     .sc-label {
-      font-family: var(--fm); font-size: 0.52rem;
+      font-family: var(--fm); font-size: 0.72rem;
       letter-spacing: 0.16em; text-transform: uppercase; color: var(--green);
     }
     .sc-grid {
@@ -247,13 +249,13 @@
     }
     .sc-val em { font-style: normal; color: var(--green); }
     .sc-desc {
-      font-family: var(--fm); font-size: 0.48rem;
+      font-family: var(--fm); font-size: 0.68rem;
       letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted);
     }
     .sc-footer {
       padding: 1rem 1.4rem;
       border-top: 1px solid var(--border);
-      font-family: var(--fm); font-size: 0.54rem;
+      font-family: var(--fm); font-size: 0.74rem;
       letter-spacing: 0.06em; color: var(--dim);
       display: flex; align-items: center; gap: 0.5rem;
     }
@@ -274,7 +276,7 @@
     }
     #ticker:hover .tick-track { animation-play-state: paused; }
     .tick-item {
-      font-family: var(--fm); font-size: 0.58rem;
+      font-family: var(--fm); font-size: 0.78rem;
       letter-spacing: 0.18em; text-transform: uppercase;
       white-space: nowrap; padding: 0 2rem; color: var(--muted);
     }
@@ -282,7 +284,7 @@
 
     /* section headers */
     .s-eye {
-      font-family: var(--fm); font-size: 0.54rem;
+      font-family: var(--fm); font-size: 0.74rem;
       letter-spacing: 0.28em; color: var(--green);
       text-transform: uppercase;
       display: flex; align-items: center; gap: 0.6rem;
@@ -357,7 +359,7 @@
       display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1.4rem;
     }
     .c-tag {
-      font-family: var(--fm); font-size: 0.48rem; letter-spacing: 0.14em;
+      font-family: var(--fm); font-size: 0.68rem; letter-spacing: 0.14em;
       text-transform: uppercase; color: var(--muted);
       border: 1px solid var(--border); padding: 0.22rem 0.55rem;
     }
@@ -393,7 +395,7 @@
     .ps-col:first-child { padding-left: 0; border-right: 1px solid rgba(180,255,0,0.1); }
     @media (max-width: 560px) { .ps-col:first-child { border-right: none; border-bottom: 1px solid rgba(180,255,0,0.1); padding: 0 0 0.75rem; } .ps-col { padding: 0.75rem 0 0; } }
     .ps-lbl {
-      font-family: var(--fm); font-size: 0.44rem;
+      font-family: var(--fm); font-size: 0.64rem;
       letter-spacing: 0.22em; text-transform: uppercase;
       color: var(--green); margin-bottom: 0.35rem;
     }
@@ -406,7 +408,7 @@
       display: flex; gap: 0.4rem; flex-wrap: wrap;
     }
     .stack-chip {
-      font-family: var(--fm); font-size: 0.48rem; letter-spacing: 0.09em;
+      font-family: var(--fm); font-size: 0.68rem; letter-spacing: 0.09em;
       color: var(--dim); border: 1px solid var(--border); padding: 0.2rem 0.5rem;
     }
 
@@ -435,12 +437,12 @@
     }
     .m-val em { font-style: normal; color: var(--green); }
     .m-label {
-      font-family: var(--fm); font-size: 0.5rem;
+      font-family: var(--fm); font-size: 0.7rem;
       letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted);
       margin-bottom: 0.5rem;
     }
     .m-note {
-      font-family: var(--fm); font-size: 0.58rem;
+      font-family: var(--fm); font-size: 0.78rem;
       color: var(--dim); line-height: 1.55;
     }
 
@@ -451,10 +453,10 @@
       margin-top: auto;
     }
     .btn-case {
-      font-family: var(--fm); font-size: 0.56rem; letter-spacing: 0.08em;
+      font-family: var(--fm); font-size: 0.76rem; letter-spacing: 0.08em;
       padding: 0.5rem 0.9rem; border: 1px solid var(--border);
       color: var(--muted); display: inline-flex; align-items: center; gap: 0.4rem;
-      transition: border-color 0.2s, color 0.2s;
+      transition: border-color 0.2s, color 0.2s; min-height: 44px;
     }
     .btn-case:hover { border-color: rgba(180,255,0,0.3); color: var(--green); }
     .btn-case-p {
@@ -467,12 +469,12 @@
     .onchain-row {
       padding: 0.85rem 1.1rem;
       border-top: 1px solid var(--border);
-      font-family: var(--fm); font-size: 0.5rem;
+      font-family: var(--fm); font-size: 0.7rem;
       letter-spacing: 0.05em; color: var(--dim);
       display: flex; align-items: center; gap: 0.5rem;
       overflow: hidden;
     }
-    .onchain-row i { color: var(--green); font-size: 0.55rem; flex-shrink: 0; }
+    .onchain-row i { color: var(--green); font-size: 0.75rem; flex-shrink: 0; }
     .onchain-addr {
       color: var(--muted); white-space: nowrap;
       overflow: hidden; text-overflow: ellipsis;
@@ -517,7 +519,7 @@
       font-size: 1.1rem; color: var(--green); margin-bottom: 1rem;
     }
     .svc-num {
-      font-family: var(--fm); font-size: 0.46rem;
+      font-family: var(--fm); font-size: 0.66rem;
       letter-spacing: 0.22em; color: var(--dim); margin-bottom: 0.85rem;
     }
     .svc-title {
@@ -530,14 +532,14 @@
       color: var(--muted); margin-bottom: 1.1rem;
     }
     .svc-proof {
-      font-family: var(--fm); font-size: 0.54rem; letter-spacing: 0.04em;
+      font-family: var(--fm); font-size: 0.74rem; letter-spacing: 0.04em;
       color: var(--prime); padding: 0.4rem 0.65rem;
       background: rgba(180,255,0,0.03);
       border: 1px solid rgba(180,255,0,0.09);
       border-left: 2px solid var(--green); line-height: 1.58;
     }
     .svc-proof-lbl {
-      font-size: 0.4rem; letter-spacing: 0.24em; color: var(--green);
+      font-size: 0.6rem; letter-spacing: 0.24em; color: var(--green);
       display: block; margin-bottom: 0.12rem;
     }
 
@@ -561,10 +563,10 @@
 
     .about-links { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1.75rem; }
     .about-link {
-      font-family: var(--fm); font-size: 0.56rem; letter-spacing: 0.07em;
+      font-family: var(--fm); font-size: 0.76rem; letter-spacing: 0.07em;
       color: var(--muted); display: inline-flex; align-items: center; gap: 0.35rem;
       border: 1px solid var(--border); padding: 0.38rem 0.75rem;
-      transition: border-color 0.2s, color 0.2s;
+      transition: border-color 0.2s, color 0.2s; min-height: 44px;
     }
     .about-link:hover { border-color: rgba(180,255,0,0.28); color: var(--green); }
 
@@ -578,11 +580,11 @@
       display: flex; flex-direction: column; gap: 0.2rem;
     }
     .cred-label {
-      font-family: var(--fm); font-size: 0.46rem;
+      font-family: var(--fm); font-size: 0.66rem;
       letter-spacing: 0.18em; text-transform: uppercase; color: var(--green);
     }
     .cred-val { font-size: 0.8rem; color: var(--prime); line-height: 1.55; }
-    .cred-note { font-family: var(--fm); font-size: 0.52rem; color: var(--muted); }
+    .cred-note { font-family: var(--fm); font-size: 0.72rem; color: var(--muted); }
 
     /* contact */
     #contact {
@@ -658,13 +660,54 @@
     .footer-inner {
       display: flex; justify-content: space-between;
       align-items: center; flex-wrap: wrap; gap: 1rem;
-      font-family: var(--fm); font-size: 0.5rem;
+      font-family: var(--fm); font-size: 0.7rem;
       letter-spacing: 0.1em; text-transform: uppercase; color: var(--dim);
     }
     .footer-mark { display: flex; align-items: center; gap: 0.5rem; }
     .footer-dot {
       width: 5px; height: 5px; border-radius: 50%;
       background: var(--green); flex-shrink: 0;
+    }
+
+    /* touch baseline */
+    a, button { touch-action: manipulation; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
+
+    @media (max-width: 768px) {
+      /* hero */
+      .hero-sub { max-width: 100%; }
+      .hero-actions { flex-direction: column; }
+      .btn-p, .btn-g { width: 100%; min-height: 52px; justify-content: center; }
+      .hero-trust { gap: 1rem; }
+
+      /* sections */
+      .section-hdr { gap: 1.25rem; }
+      .s-sub { max-width: 100%; }
+
+      /* case studies */
+      .case-num { display: none; }
+      .case-cta-row { flex-direction: column; }
+      .btn-case { width: 100%; justify-content: center; }
+
+      /* services — reduce card padding slightly on small screens */
+      .svc-card { padding: 1.4rem 1.25rem; }
+
+      /* contact */
+      .cta-btns { flex-direction: column; align-items: stretch; }
+      .btn-xl, .btn-xl-g { width: 100%; min-height: 56px; justify-content: center; }
+      .contact-cell { flex: none; width: 100%; min-width: 0; min-height: 56px; }
+
+      /* footer */
+      .footer-inner { flex-direction: column; text-align: center; gap: 0.5rem; }
+      .footer-mark { justify-content: center; }
+    }
+
+    @media (max-width: 480px) {
+      h1.hero-h { font-size: clamp(2rem, 7.5vw, 2.6rem); }
+      .hero-trust { flex-direction: column; gap: 0.5rem; }
+      .sc-val { font-size: 1.6rem; }
+      .cta-h { font-size: clamp(1.9rem, 7vw, 2.5rem); }
+      .avail-text { letter-spacing: 0.08em; }
     }
   </style>
 </head>
@@ -939,7 +982,7 @@
               <div class="m-note">Technical Partner engagement across BTFD Rabbits, LT3, DZNTS, and Based Genetics - May 2022 to present.</div>
             </div>
             <div class="case-cta-row">
-              <a href="https://btfdrabbits.io" target="_blank" rel="noopener" class="btn-case btn-case-p">
+              <a href="https://btfdrabbits.com" target="_blank" rel="noopener" class="btn-case btn-case-p">
                 <i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i> Project Site
               </a>
               <a href="https://www.linkedin.com/in/chris-nwasike" target="_blank" rel="noopener" class="btn-case">
@@ -958,14 +1001,14 @@
 
             <div class="case-tag-row">
               <span class="c-tag">Idle Game</span>
-              <span class="c-tag">9,975 NFTs · Ethereum</span>
+              <span class="c-tag">555 NFTs · Ethereum</span>
               <span class="c-tag c-tag-g">Ecosystem Revival</span>
             </div>
 
             <h3 class="case-title">The Secret World - Web3 Idle Game Platform</h3>
 
             <p class="case-desc">
-              Took over development of a <strong>9,975-piece Ethereum NFT collection</strong> and built it into a modular idle game ecosystem from the ground up. Designed and shipped: farming contracts, staking, combat progression, dynamic metadata with IPFS synchronization, breeding mechanics, trait-layer systems, holder utility (soft staking, trait shops, quest chains), and the FruitGem / Ephemeral NFT token economy.
+              Took over development of a <strong>555-piece Ethereum NFT collection</strong> and built it into a modular idle game ecosystem from the ground up. Designed and shipped: farming contracts, staking, combat progression, dynamic metadata with IPFS synchronization, breeding mechanics, trait-layer systems, holder utility (soft staking, trait shops, quest chains), and the FruitGem / Ephemeral NFT token economy.
               <br><br>
               The ecosystem was built with a <strong>plug-in architecture</strong> allowing new game modules to be added without breaking existing player state - critical for a live community with holders tracking their assets on-chain.
             </p>
@@ -995,7 +1038,7 @@
           <div class="case-right">
             <div class="metric-block">
               <div class="m-label">Collection Size</div>
-              <div class="m-val"><em>9,975</em></div>
+              <div class="m-val"><em>555</em></div>
               <div class="m-note">Ethereum NFTs. Took over development and executed full utility redesign - trait systems, breeding, staking, and idle game progression.</div>
             </div>
             <div class="metric-block">
@@ -1009,7 +1052,7 @@
               <div class="m-note">Real-time dynamic metadata: trait state updates sync between on-chain and IPFS automatically as players progress.</div>
             </div>
             <div class="case-cta-row">
-              <a href="https://www.secretsotw.com" target="_blank" rel="noopener" class="btn-case btn-case-p">
+              <a href="https://sotw.punkverse.world/" target="_blank" rel="noopener" class="btn-case btn-case-p">
                 <i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i> Live Site
               </a>
             </div>
@@ -1060,7 +1103,7 @@
         <p class="svc-desc">Dynamic metadata, IPFS synchronization, trait mutation, breeding mechanics, rarity progression. On-chain / off-chain state management that doesn't break when you add new game layers.</p>
         <div class="svc-proof">
           <span class="svc-proof-lbl">Shipped Example</span>
-          Secret World Gaming Studio - 9,975 ETH NFTs with live dynamic metadata.
+          Secret World Gaming Studio - 555 ETH NFTs with live dynamic metadata.
         </div>
       </div>
 
@@ -1124,7 +1167,7 @@
             <i class="fa-brands fa-linkedin fa-xs"></i> LinkedIn
           </a>
           <a href="https://x.com/chrisnwasike" target="_blank" rel="noopener" class="about-link">
-            <i class="fa-brands fa-x-twitter fa-xs"></i> X / Twitter
+            <i class="fa-brands fa-x-twitter fa-xs"></i> Twitter / X
           </a>
           <a href="https://calendly.com/chrisnwasike/30min" target="_blank" rel="noopener" class="about-link">
             <i class="fa-solid fa-calendar fa-xs"></i> Calendly
